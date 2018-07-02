@@ -1,0 +1,13 @@
+{
+    "name": "christophrumpel/bcwp-php-starter",
+    "description": "PHP Starter Project for Chatbots",
+    "require": {
+        "monolog/monolog": "^1.23",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "authors": [
+        {
+            "name": "Christoph Rumpel"
+        }
+    ]
+}
