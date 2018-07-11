@@ -2,10 +2,9 @@
 
 namespace App;
 
-interface Message {
-
+interface Message
+{
     public function toArray();
 
     public function getApiEndpoint();
-
 }

@@ -35,7 +35,7 @@ switch ($messenger) {
         $reply = false;
 }
 
-if($reply) {
+if ($reply) {
     $client = new HttpClient();
     $client->send($reply);
 }

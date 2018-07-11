@@ -2,19 +2,20 @@
 
 namespace App;
 
-class TelegramMessage implements Message {
+class TelegramMessage implements Message
+{
 
-    /** @var string  */
+    /** @var string */
     protected $message;
 
     /** @var string */
     protected $chatId;
 
-    /** @var string  */
+    /** @var string */
     protected $apiEndpoint;
 
-
-    public function __construct(string $message, string $chatId) {
+    public function __construct(string $message, string $chatId)
+    {
         $this->message = $message;
         $this->chatId = $chatId;
         $this->apiEndpoint = 'https://api.telegram.org/bot'.getenv('TELEGRAM_TOKEN').'/sendmessage';
@@ -29,7 +30,7 @@ class TelegramMessage implements Message {
     {
         return [
             'chat_id' => $this->chatId,
-            'text' => $this->message
+            'text' => $this->message,
         ];
     }
 

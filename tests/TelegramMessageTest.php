@@ -48,7 +48,7 @@ class TelegramMessageTest extends TestCase
         // Then
         $array = [
             'chat_id' => '1234',
-            'text' => 'hi'
+            'text' => 'hi',
         ];
 
         $this->assertEquals($array, $messageArray);

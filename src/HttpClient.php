@@ -7,10 +7,11 @@ use Monolog\Handler\StreamHandler;
 
 class HttpClient
 {
-    /** @var Logger  */
+    /** @var Logger */
     protected $log;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->log = new Logger('general');
         $this->log->pushHandler(new StreamHandler('debug.log'));
     }
