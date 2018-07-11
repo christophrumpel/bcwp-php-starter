@@ -27,9 +27,9 @@ if (isset($input['hub_challenge'])) {
     exit;
 }
 
-if(isset($input['entry'][0]['messaging'][0]['message']['text'])) {
+if (isset($input['entry'][0]['messaging'][0]['message']['text'])) {
     // Message is from Facebook
-    $url = 'https://graph.facebook.com/v2.6/me/messages?access_token='.getenv('FACEBOOK_PAGE_ACCESS_TOKEN');
+    $url = 'https://graph.facebook.com/v3.0/me/messages?access_token='.getenv('FACEBOOK_PAGE_ACCESS_TOKEN');
     $reply = [
         'messaging_type' => 'RESPONSE',
         'recipient' => [
@@ -46,7 +46,6 @@ if(isset($input['entry'][0]['messaging'][0]['message']['text'])) {
         'text' => 'This is a reply',
     ];
 }
-
 
 $ch = curl_init($url);
 
